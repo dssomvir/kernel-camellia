@@ -41,10 +41,10 @@ CUSTOM_KERNEL_FLAGS := $(addprefix -D, $(shell echo \
 subdir-ccflags-y += $(CUSTOM_KERNEL_FLAGS)
 
 obj-y += $(subst ",,$(CONFIG_MTK_PLATFORM_SENSOR))/
-ifeq ($(TARGET_PRODUCT),$(filter $(TARGET_PRODUCT),camellia))
+ifeq ($(TARGET_PRODUCT),$(filter $(TARGET_PRODUCT),lineage_camellia))
 KBUILD_CFLAGS += -DTARGET_PRODUCT_CAMELLIA
 endif
-ifeq ($(TARGET_PRODUCT),$(filter $(TARGET_PRODUCT),camellian))
+ifeq ($(TARGET_PRODUCT),$(filter $(TARGET_PRODUCT),lineage_camellian))
 KBUILD_CFLAGS += -DTARGET_PRODUCT_CAMELLIAN
 endif
 

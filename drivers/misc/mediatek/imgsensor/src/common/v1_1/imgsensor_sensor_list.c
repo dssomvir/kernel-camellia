@@ -22,7 +22,7 @@
  * 2. This file should be the same as
  *    mediatek\custom\common\hal\imgsensor\src\sensorlist.cpp
  */
-#if defined(TARGET_PRODUCT_CAMELLIA) || (TARGET_PRODUCT_CAMELLIAN)
+#if defined(TARGET_PRODUCT_CAMELLIA)
 struct IMGSENSOR_SENSOR_LIST
 	gimgsensor_sensor_list[MAX_NUM_OF_SUPPORT_SENSOR] = {
 #if defined(OV48B_QTECH_MAIN_MIPI_RAW)

@@ -19,7 +19,7 @@
 
 /* Legacy design */
 
-#if defined(TARGET_PRODUCT_CAMELLIA) || (TARGET_PRODUCT_CAMELLIAN)
+#if defined(TARGET_PRODUCT_CAMELLIA)
 struct IMGSENSOR_HW_POWER_SEQ sensor_power_sequence[] = {
 
 #if defined(OV48B_QTECH_MAIN_MIPI_RAW)
