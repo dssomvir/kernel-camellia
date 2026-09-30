@@ -6,11 +6,8 @@ ifeq ($(strip $(FACTORY_VERSION_MODE)),true)
 ccflags-y += -DFACTORY_CAMERA_MODE
 else
 ccflags-y += -D__XIAOMI_CAMERA__
-ifeq ($(strip $(TARGET_PRODUCT)),camellia)
+ifeq ($(strip $(TARGET_PRODUCT)),lineage_camellia)
 ccflags-y += -D__CAMELLIA_COMMON__
-endif
-ifeq ($(strip $(TARGET_PRODUCT)),camellian)
-ccflags-y += -D__CAMELLIAN_COMMON__
 endif
 
 endif
