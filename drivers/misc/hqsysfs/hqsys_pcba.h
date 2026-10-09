@@ -1,0 +1,70 @@
+#ifndef HQSYS_PCBA
+#define HQSYS_PCBA
+
+typedef enum
+{
+	PCBA_UNKNOW = 0,
+
+	PCBA_L19_P0_1_CN = 1,
+	PCBA_L19_P0_1_GLOBAL,
+	PCBA_L19_P0_1_IN,
+	PCBA_L19P_P0_1_GLOBAL,
+	PCBA_L19P_P0_1_IN,
+	PCBA_L19N_P0_1_GLOBAL,
+	PCBA_L19X_P0_1_CN,
+
+	PCBA_L19_P1_CN = 8,
+	PCBA_L19_P1_GLOBAL,
+	PCBA_L19_P1_IN,
+	PCBA_L19P_P1_GLOBAL,
+	PCBA_L19P_P1_IN,
+	PCBA_L19N_P1_GLOBAL,
+	PCBA_L19X_P1_CN,
+
+	PCBA_L19_P1_1_CN = 15,
+	PCBA_L19_P1_1_GLOBAL,
+	PCBA_L19_P1_1_IN,
+	PCBA_L19P_P1_1_GLOBAL,
+	PCBA_L19P_P1_1_IN,
+	PCBA_L19N_P1_1_GLOBAL,
+	PCBA_L19X_P1_1_CN,
+
+	PCBA_L19_P2_CN = 22,
+	PCBA_L19_P2_GLOBAL,
+	PCBA_L19_P2_IN,
+	PCBA_L19P_P2_GLOBAL,
+	PCBA_L19P_P2_IN,
+	PCBA_L19N_P2_GLOBAL,
+	PCBA_L19X_P2_CN,
+
+	PCBA_L19_MP_CN = 29,
+	PCBA_L19_MP_GLOBAL,
+	PCBA_L19_MP_IN,
+	PCBA_L19P_MP_GLOBAL,
+	PCBA_L19P_MP_IN,
+	PCBA_L19N_MP_GLOBAL,
+	PCBA_L19X_MP_CN,
+
+	PCBA_END
+} PCBA_CONFIG;
+/* Huaqin modify for HQ-158772 by wangzhaoguo at 2021/10/21 start */
+typedef enum
+{
+	UNKNOW = 0,
+	P0_1,
+	P1,
+	P1_1,
+	P2,
+	MP,
+} PROJECT_STAGE;
+/* Huaqin modify for HQ-158772 by wangzhaoguo at 2021/10/21 end */
+extern PCBA_CONFIG huaqin_pcba_config;
+
+struct pcba_info {
+	PCBA_CONFIG pcba_config;
+	char pcba_name[32];
+};
+
+PCBA_CONFIG get_huaqin_pcba_config(void);
+
+#endif

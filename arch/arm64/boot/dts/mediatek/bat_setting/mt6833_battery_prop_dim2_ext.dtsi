@@ -1,0 +1,77 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * Copyright (c) 2019 MediaTek Inc.
+*/
+
+/*vboot voltage for gauge 0%*/
+g_PMIC_MIN_VOL_row = <4>;
+g_PMIC_MIN_VOL_col = <10>;
+/*L19 HQHW-1504 modify 25 degree value by miaozhichao at 2022/1/19 start*/
+g_PMIC_MIN_VOL =
+<
+	28000  28000  28000  28000
+	28000  28000  28000  28000
+	33500  33500  33500  33500
+	32200  32200  32200  32200
+	31000  31000  31000  31000
+	31500  31500  31500  31500
+	31000  31000  31000  31000
+	31000  31000  31000  31000
+	31000  31000  31000  31000
+	31000  31000  31000  31200
+>;
+/*L19 HQHW-1504 modify 25 degree value by miaozhichao at 2022/1/19 end*/
+/*boot_up current for gauge 0%*/
+g_PON_SYS_IBOOT_row = <4>;
+g_PON_SYS_IBOOT_col = <10>;
+g_PON_SYS_IBOOT =
+<
+	5000  5000  5000  5000
+	5000  5000  5000  5000
+	5000  5000  5000  5000
+	5000  5000  5000  5000
+	5000  5000  5000  5000
+	5000  5000  5000  5000
+	5000  5000  5000  5000
+	5000  5000  5000  5000
+	5000  5000  5000  5000
+	5000  5000  5000  5000
+>;
+/*Pseudo1 hide percentage*/
+g_QMAX_SYS_VOL_row = <4>;
+g_QMAX_SYS_VOL_col = <10>;
+/*L19 HQHW-1503 modify 25 degree value by miaozhichao at 2022/1/8 start*/
+/*L19 HQHW-1502 modify -10 degree value by miaozhichao at 2022/1/10 start*/
+/*L19 HQHW-1605 modify -10 degree value by miaozhichao at 2022/2/16 start*/
+g_QMAX_SYS_VOL =
+<
+	32750  32750  32750  32750
+	32750  32750  32750  32750
+	35312  35312  35312  35312
+	33212  33212  33212  33212
+	33212  33212  33212  33212
+	32500  32500  32500  32500
+	32800  32800  32800  32800
+	32800  32800  32800  32800
+	32800  32800  32800  32800
+	32800  32800  32800  32800
+>;
+/*L19 HQHW-1605 modify -10 degree value by miaozhichao at 2022/2/16 end*/
+/*L19 HQHW-1502 modify -10 degree value by miaozhichao at 2022/1/10 end*/
+/*L19 HQHW-1503 modify 25 degree value by miaozhichao at 2022/1/8 end*/
+/*Pseudo100 percentage setting*/
+g_FG_PSEUDO100_row = <4>;
+g_FG_PSEUDO100_col = <10>;
+g_FG_PSEUDO100 =
+<
+	100  100  100  100
+	100  100  100  100
+	100  100  100  100
+	100  100  100  100
+	100  100  100  100
+	100  100  100  100
+	100  100  100  100
+	100  100  100  100
+	100  100  100  100
+	100  100  100  100
+>;

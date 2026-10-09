@@ -1,0 +1,11 @@
+config MILLET
+	bool "frozen framework"
+	depends on MIHW
+	help
+	  Mi frozen function
+
+config MIHW_PROJECT
+	string "MIHW_PROJECT"
+	depends on MIHW
+	help
+	  Use to identify project.
