@@ -453,12 +453,6 @@
 	status = "okay";
 };
 
-&esd_flag {
-	interrupt-parent = <&pio>;
-	interrupts = <17 IRQ_TYPE_EDGE_FALLING>;
-	status = "okay";
-};
-
 &goodix_fp {
 	interrupt-parent = <&pio>;
 	interrupts = <22 IRQ_TYPE_EDGE_FALLING>;
@@ -468,8 +462,6 @@
 &swtp {
 	interrupt-parent = <&pio>;
 	interrupts = <45 IRQ_TYPE_LEVEL_HIGH>;
-	deb-gpios = <&pio 45 0>;
-	debounce = <0>;
 	status = "okay";
 };
 
