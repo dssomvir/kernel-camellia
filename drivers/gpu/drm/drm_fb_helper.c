@@ -3290,4 +3290,3 @@ int __init drm_fb_helper_modinit(void)
 #endif
 	return 0;
 }
-EXPORT_SYMBOL(drm_fb_helper_modinit);
