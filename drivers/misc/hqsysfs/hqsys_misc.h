@@ -74,7 +74,7 @@ struct cam_info{
 #define __MISC(_id, _misc_name) {				\
 		.m_id = _id,				\
 		.attr = {.name = __stringify(_misc_name),				\
-				.mode = VERIFY_OCTAL_PERMISSIONS(S_IWUSR|S_IRUGO) },	\
+		.mode = VERIFY_OCTAL_PERMISSIONS(S_IWUSR | S_IRUGO) },		\
 	}
 
 
@@ -101,7 +101,7 @@ struct cam_info{
 	struct cam_info cam_info_##_drv = { \
 		.cam_drv_name = __stringify(_drv),                           \
 		.cam_vendro_name = __stringify(_vendor),                           \
-		}
+	}
 
 char *get_emmc_name(void);
 char *map_cam_drv_to_vendor(char *drv);

@@ -34,6 +34,9 @@
 #endif
 #include <linux/atomic.h>
 
+
+
+
 #define MAX_HW_DEVICE_NAME (64)
 
 enum hardware_id{
@@ -46,9 +49,9 @@ enum hardware_id{
 	HWID_SUB_LCM,
 	HWID_BIAS_IC,
 	HWID_CTP,
-/* K19A BSP.Audio bring up second PA by zhagpeng at 2021/3/5 start*/
+/* BSP.Audio - 2020.11.11 - modify to bring up second PA */
 	HWID_AUDIO,
-/* K19A BSP.Audio bring up second PA by zhagpeng at 2021/3/5 end*/
+/* end modify*/
 
 	HWID_MAIN_CAM = 0x30,
 	HWID_MAIN_CAM_2,
@@ -89,9 +92,11 @@ enum hardware_id{
 
 	HWID_SUMMARY = 0xF0,
 	HWID_VER,
-	HWID_PMIC_VERSION,
+	/* BSP.Charge - 2020.11.26 - Add node to show pmic_version */
+	HWID_PMIC,
 	HWID_END
 };
+
 
 struct hw_info{
 	enum hardware_id hw_id;
@@ -101,10 +106,11 @@ struct hw_info{
 	char *hw_device_name;
 };
 
+
 #define __INFO(_id, _hw_type_name) {				\
 		.hw_id = _id,				\
 		.attr = {.name = __stringify(_hw_type_name),				\
-		.mode = VERIFY_OCTAL_PERMISSIONS(S_IWUSR|S_IRUGO) },		\
+		.mode = VERIFY_OCTAL_PERMISSIONS(S_IWUSR | S_IRUGO) },		\
 		.hw_exist	= 0,						\
 		.hw_device_name	= NULL,						\
 	}
@@ -113,10 +119,14 @@ struct hw_info{
 #define HW_INFO(_id, _hw_type_name) \
 	struct hw_info hw_info_##_hw_type_name = __INFO(_id, _hw_type_name)
 
+
+
 #define HUAQIN_CLASS_NAME       "huaqin"
 #define HUAIN_INTERFACE_NAME	"interface"
 #define HUAQIN_HWID_NAME        "hw_info"
 #define HUAQIN_VERSION_FILE		"hw_info_ver"
+
+
 
 int hq_regiser_hw_info(enum hardware_id id, char *device_name);
 int hq_deregister_hw_info(enum hardware_id id, char *device_name);

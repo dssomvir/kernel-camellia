@@ -9,11 +9,10 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 #
-#Huaqin modify for HQ-158772 by wangzhaoguo at 2021/10/28 start
+
 # obj-$(CONFIG_HQ_SYSFS_SUPPORT) := hqsysfs.o
 obj-$(CONFIG_HQ_SYSFS_SUPPORT) := hqsysfs.o
 obj-$(CONFIG_HQ_SYSFS_SUPPORT) += hqsys_misc.o
 obj-$(CONFIG_HQ_SYSFS_SUPPORT) += hqsys_pcba.o
-#Huaqin modify for HQ-158772 by wangzhaoguo at 2021/10/28 end
 #obj-y += hqsys_emmc_info.o
 #obj-y += hqsys_cam_info.o
